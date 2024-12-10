@@ -1,43 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+    <title>Gallery</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./src/styles.css" />
   </head>
+
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+    <div class="gallery">
+      <figure data-grid="img-1">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/f/f3/1966_Ferrari_275_GTB_sn_08549%2C_front_left_%28Greenwich_2019%29.jpg"
+          alt="275 GTB"
+        />
+      </figure>
+      <figure data-grid="img-2">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFNaLhqUb2VWw8t2vkHhoBgIg3HT8WGic34A&s"
+          alt="E-Type"
+        />
+      </figure>
+      <figure data-grid="img-3">
+        <img
+          src="https://images5.alphacoders.com/382/382172.jpg"
+          alt="Type 57"
+        />
+      </figure>
+      <figure data-grid="img-4">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/2/2e/ATMS_41_-_Mercedes-Benz.jpg"
+          alt="good dog"
+        />
+      </figure>
+      <figure data-grid="img-5">
+        <img
+          src="https://cdn.motor1.com/images/mgl/QeX9Y7/24:0:2398:1799/duesenberg-twenty-grand-jay-leno-s-garage.webp"
+          alt="20G"
+        />
+      </figure>
+      <figure data-grid="img-6">
+        <img
+          src="https://storagegohistorics.blob.core.windows.net/stock/15619-66-medium.jpg?v=63853365300667"
+          alt="good dog"
+        />
+      </figure>
+    </div>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+    <script src="src/index.js"></script>
   </body>
 </html>

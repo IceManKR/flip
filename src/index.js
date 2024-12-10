@@ -1,17 +1,28 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { gsap } from "gsap";
+    
+import { Flip } from "gsap/Flip";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+import './App.css';
+gsap.registerPlugin(Flip);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+let dogs = gsap.utils.toArray("figure");
+let bigDog = dogs[0];
+
+dogs.forEach((dog)=>{
+  dog.addEventListener('click', (e)=> changeGrid(dog))
+})
+
+function changeGrid(dog){
+  if(dog === bigDog) return;
+
+  let state = Flip.getState(dogs)
+
+  bigDog.dataset.grid = dog.dataset.grid;
+  dog.dataset.grid = "img-1";
+  bigDog = dog;
+  Flip.from(state, {
+    absolute:true,
+    ease: 'power1.inOut'
+  })
+}
+export default changeGrid;
